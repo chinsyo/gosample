@@ -3,18 +3,18 @@ package main
 import "fmt"
 
 type I interface {
-    M()
+	M()
 }
 
 type T struct {
-    S string
+	S string
 }
 
 func (t T) M() {
-    fmt.Println(t.S)
+	fmt.Println(t.S)
 }
 
 func main() {
-    var i I = T{"hello"}
-    i.M()
+	var i I = T{"hello"}
+	i.M()
 }

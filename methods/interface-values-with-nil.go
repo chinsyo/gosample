@@ -3,34 +3,34 @@ package main
 import "fmt"
 
 type I interface {
-    M()
+	M()
 }
 
 type T struct {
-    S string
+	S string
 }
 
 func (t *T) M() {
-    if t == nil {
-        fmt.Println("<nil>")
-	return
-    }
-    fmt.Println(t.S)
+	if t == nil {
+		fmt.Println("<nil>")
+		return
+	}
+	fmt.Println(t.S)
 }
 
 func main() {
-    var i I
+	var i I
 
-    var t *T
-    i = t
-    describe(i)
-    i.M()
+	var t *T
+	i = t
+	describe(i)
+	i.M()
 
-    i = &T{"hello"}
-    describe(i)
-    i.M()
+	i = &T{"hello"}
+	describe(i)
+	i.M()
 }
 
 func describe(i I) {
-    fmt.Printf("(%v, %T)\n", i, i)
+	fmt.Printf("(%v, %T)\n", i, i)
 }
