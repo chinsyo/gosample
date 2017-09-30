@@ -1,6 +1,8 @@
 package main
 
-import "golang.org/x/tour/reader"
+import (
+	"golang.org/x/tour/reader"
+)
 
 type MyReader struct{}
 

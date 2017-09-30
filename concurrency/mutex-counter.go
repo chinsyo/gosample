@@ -18,8 +18,8 @@ func (c *SafeCounter) Inc(key string) {
 }
 
 func (c *SafeCounter) Value(key string) int {
-	c.mux.Lock()
 	defer c.mux.Unlock()
+	c.mux.Lock()
 	return c.v[key]
 }
 

@@ -8,8 +8,8 @@ import (
 // Walk walks the tree t sending all values
 // from the tree to the channel ch.
 func Walk(t *tree.Tree, ch chan int) {
+	defer close(ch)
 	Cmpr(t, ch)
-	close(ch)
 }
 
 func Cmpr(t *tree.Tree, ch chan int) {

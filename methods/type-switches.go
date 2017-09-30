@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func do(i interface{}) {
 	switch v := i.(type) {

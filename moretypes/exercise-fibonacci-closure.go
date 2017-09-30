@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func fibonacci() func() int {
 	a, b := 0, 1
