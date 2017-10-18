@@ -1,1 +1,1 @@
-# gotour
+* gosample
