@@ -1,1 +1,1 @@
-* gosample
+# gosample
